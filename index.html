@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Lumière | Moda francesa</title>
+  <meta name="description" content="Moda francesa contemporánea: calzado, camisas, pantalones y accesorios.">
+  <link rel="stylesheet" href="docs/css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface px-4 py-2">Saltar al contenido</a>
+
+  <header itemscope itemtype="https://schema.org/WPHeader" class="bg-surface border-b border-line">
+    <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
+      <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
+
+      <form action="#" role="search" class="order-last w-full md:order-none md:w-80">
+        <label for="buscar" class="sr-only">Buscar productos</label>
+        <div class="flex items-center border border-line rounded-full px-4 h-11 bg-surface">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="buscar" name="q" type="search" placeholder="Buscar" class="ml-2 w-full bg-transparent outline-none">
+        </div>
+      </form>
+
+      <a href="#" aria-label="Mi cuenta" class="inline-flex size-11 items-center justify-center">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 py-10"></main>
+
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="bg-ink text-white">
+    <div itemscope itemtype="https://schema.org/Organization" class="mx-auto max-w-[1440px] px-4 md:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <nav aria-label="Categorías">
+        <h2 class="font-semibold mb-3">Categorías</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Calzado</a></li>
+          <li><a href="#" class="hover:underline">Camisas</a></li>
+          <li><a href="#" class="hover:underline">Pantalones</a></li>
+          <li><a href="#" class="hover:underline">Accesorios</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Información legal">
+        <h2 class="font-semibold mb-3">Información</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+          <li><a href="#" class="hover:underline">Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Sobre la marca</a></li>
+        </ul>
+      </nav>
+      <address class="not-italic text-sm space-y-2">
+        <h2 class="font-semibold mb-3 text-base">Contacto</h2>
+        <p itemprop="name">Maison Lumière</p>
+        <p itemprop="address">12 Rue du Faubourg, 75008 París</p>
+        <p><a itemprop="email" href="mailto:hola@maisonlumiere.fr" class="hover:underline">hola@maisonlumiere.fr</a></p>
+        <p><a itemprop="telephone" href="tel:+33100000000" class="hover:underline">+33 1 00 00 00 00</a></p>
+      </address>
+    </div>
+    <p class="border-t border-white/20 text-center text-xs py-4 text-white/80">© 2026 Maison Lumière. Prototipo demostrativo.</p>
+  </footer>
+</body>
+</html>
