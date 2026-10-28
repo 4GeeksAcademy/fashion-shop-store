@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Maison Lumière</title>
+  <meta name="description" content="Completa tus datos de contacto, entrega y pago para tu pedido de Maison Lumière.">
+  <link rel="stylesheet" href="docs/css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface px-4 py-2">Saltar al contenido</a>
+
+  <header itemscope itemtype="https://schema.org/WPHeader" class="sticky top-0 z-50 bg-surface border-b border-line">
+    <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
+      <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
+      <a href="catalogo.html" class="text-sm font-semibold hover:underline">Catálogo</a>
+
+      <form action="#" role="search" class="order-last w-full md:order-none md:w-80">
+        <label for="buscar" class="sr-only">Buscar productos</label>
+        <div class="flex items-center border border-line rounded-full px-4 h-11 bg-surface">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="buscar" name="q" type="search" placeholder="Buscar" class="ml-2 w-full bg-transparent outline-none">
+        </div>
+      </form>
+
+      <a href="#" aria-label="Mi cuenta" class="inline-flex size-11 items-center justify-center">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 py-10">
+    <nav aria-label="Ruta de navegación" class="text-sm text-muted mb-8">
+      <a href="index.html" class="hover:underline">Inicio</a>
+      <span aria-hidden="true" class="mx-2">/</span>
+      <span aria-current="page">Checkout</span>
+    </nav>
+
+    <div class="mx-auto max-w-4xl">
+      <p class="text-sm uppercase tracking-wide text-muted mb-2">Maison Lumière · París</p>
+      <h1 class="font-display text-4xl md:text-5xl">Finalizar compra</h1>
+      <p class="mt-3 max-w-2xl text-sm leading-6 text-muted">Completa tus datos de contacto, entrega y pago para continuar con tu pedido.</p>
+
+      <nav aria-label="Pasos del checkout" class="mt-8 mb-10">
+        <ol class="grid gap-3 sm:grid-cols-3 sm:gap-0">
+          <li class="relative border-b border-line pb-2 sm:border-0 sm:pb-0">
+            <span aria-hidden="true" class="pointer-events-none absolute left-1/2 top-4 hidden h-px w-full bg-line sm:block"></span>
+            <a href="#datos-personales" class="group relative z-10 flex min-h-11 items-center gap-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-focus sm:min-h-0 sm:flex-col sm:gap-2 sm:text-center">
+              <span aria-hidden="true" class="grid size-8 shrink-0 place-items-center rounded-full border-2 border-accent bg-bg text-xs text-accent group-hover:bg-accent group-hover:text-white">01</span>
+              <span>Datos personales</span>
+            </a>
+          </li>
+          <li class="relative border-b border-line pb-2 sm:border-0 sm:pb-0">
+            <span aria-hidden="true" class="pointer-events-none absolute left-1/2 top-4 hidden h-px w-full bg-line sm:block"></span>
+            <a href="#direccion-entrega" class="group relative z-10 flex min-h-11 items-center gap-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-focus sm:min-h-0 sm:flex-col sm:gap-2 sm:text-center">
+              <span aria-hidden="true" class="grid size-8 shrink-0 place-items-center rounded-full border-2 border-accent bg-bg text-xs text-accent group-hover:bg-accent group-hover:text-white">02</span>
+              <span>Dirección de entrega</span>
+            </a>
+          </li>
+          <li class="relative sm:text-center">
+            <a href="#pago-tarjeta" class="group relative z-10 flex min-h-11 items-center gap-3 text-sm font-semibold focus-visible:outline-2 focus-visible:outline-focus sm:min-h-0 sm:flex-col sm:gap-2">
+              <span aria-hidden="true" class="grid size-8 shrink-0 place-items-center rounded-full border-2 border-accent bg-bg text-xs text-accent group-hover:bg-accent group-hover:text-white">03</span>
+              <span>Pago con tarjeta</span>
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+      <form aria-label="Datos de checkout" class="checkout-flow">
+        <fieldset id="datos-personales" class="checkout-step scroll-mt-32 border-b border-line pb-8">
+          <legend class="font-display text-2xl">01 · Datos personales</legend>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="nombre" class="block text-sm font-semibold mb-2">Nombre</label>
+              <input id="nombre" name="given-name" type="text" autocomplete="given-name" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="apellidos" class="block text-sm font-semibold mb-2">Apellidos</label>
+              <input id="apellidos" name="family-name" type="text" autocomplete="family-name" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold mb-2">Correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="telefono" class="block text-sm font-semibold mb-2">Teléfono</label>
+              <input id="telefono" name="tel" type="tel" autocomplete="tel" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+          </div>
+          <nav aria-label="Navegación de pasos" class="mt-8 flex justify-end">
+            <a href="#direccion-entrega" class="inline-flex min-h-11 items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-ink focus-visible:outline-2 focus-visible:outline-focus">Siguiente: dirección</a>
+          </nav>
+        </fieldset>
+
+        <fieldset id="direccion-entrega" class="checkout-step scroll-mt-32 border-b border-line pb-8">
+          <legend class="font-display text-2xl">02 · Dirección de entrega</legend>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="direccion" class="block text-sm font-semibold mb-2">Dirección</label>
+              <input id="direccion" name="street-address" type="text" autocomplete="street-address" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="apartamento" class="block text-sm font-semibold mb-2">Apartamento, piso o complemento <span class="font-normal text-muted">(opcional)</span></label>
+              <input id="apartamento" name="address-line2" type="text" autocomplete="address-line2" class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="ciudad" class="block text-sm font-semibold mb-2">Ciudad</label>
+              <input id="ciudad" name="address-level2" type="text" autocomplete="address-level2" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="region" class="block text-sm font-semibold mb-2">Provincia o región</label>
+              <input id="region" name="address-level1" type="text" autocomplete="address-level1" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="codigo-postal" class="block text-sm font-semibold mb-2">Código postal</label>
+              <input id="codigo-postal" name="postal-code" type="text" autocomplete="postal-code" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="pais" class="block text-sm font-semibold mb-2">País</label>
+              <select id="pais" name="country-name" autocomplete="country-name" required class="h-11 w-full border border-line bg-surface px-3 text-sm">
+                <option value="FR" selected>Francia</option>
+                <option value="ES">España</option>
+                <option value="BE">Bélgica</option>
+                <option value="CH">Suiza</option>
+              </select>
+            </div>
+          </div>
+          <nav aria-label="Navegación de pasos" class="mt-8 flex flex-wrap justify-between gap-3">
+            <a href="#datos-personales" class="inline-flex min-h-11 items-center justify-center border border-line bg-surface px-6 py-3 text-sm font-semibold hover:border-accent focus-visible:outline-2 focus-visible:outline-focus">Anterior</a>
+            <a href="#pago-tarjeta" class="inline-flex min-h-11 items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-ink focus-visible:outline-2 focus-visible:outline-focus">Siguiente: pago</a>
+          </nav>
+        </fieldset>
+
+        <fieldset id="pago-tarjeta" class="checkout-step scroll-mt-32 pb-2">
+          <legend class="font-display text-2xl">03 · Pago con tarjeta</legend>
+          <p id="aviso-pago" role="note" class="mt-3 border-l-2 border-accent pl-4 text-sm leading-6 text-muted">Prototipo demostrativo: no introduzcas datos reales de tarjeta. La información no se envía ni se procesa.</p>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="titular" class="block text-sm font-semibold mb-2">Nombre del titular</label>
+              <input id="titular" name="cc-name" type="text" autocomplete="cc-name" required aria-describedby="aviso-pago" class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="numero-tarjeta" class="block text-sm font-semibold mb-2">Número de tarjeta</label>
+              <input id="numero-tarjeta" name="cc-number" type="text" inputmode="numeric" autocomplete="cc-number" required aria-describedby="aviso-pago" placeholder="0000 0000 0000 0000" class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="vencimiento" class="block text-sm font-semibold mb-2">Vencimiento</label>
+              <input id="vencimiento" name="cc-exp" type="month" autocomplete="cc-exp" required aria-describedby="aviso-pago" class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+            <div>
+              <label for="codigo-seguridad" class="block text-sm font-semibold mb-2">Código de seguridad</label>
+              <input id="codigo-seguridad" name="cc-csc" type="password" inputmode="numeric" autocomplete="cc-csc" required aria-describedby="aviso-pago" class="h-11 w-full border border-line bg-surface px-3 text-sm">
+            </div>
+          </div>
+          <nav aria-label="Navegación de pasos" class="mt-8 flex flex-wrap justify-between gap-3">
+            <a href="#direccion-entrega" class="inline-flex min-h-11 items-center justify-center border border-line bg-surface px-6 py-3 text-sm font-semibold hover:border-accent focus-visible:outline-2 focus-visible:outline-focus">Anterior</a>
+            <button type="submit" disabled class="min-h-11 bg-primary px-6 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60">Confirmar pedido</button>
+          </nav>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="bg-ink text-white">
+    <div itemscope itemtype="https://schema.org/Organization" class="mx-auto max-w-[1440px] px-4 md:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <nav aria-label="Categorías">
+        <h2 class="font-semibold mb-3">Categorías</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Calzado</a></li>
+          <li><a href="#" class="hover:underline">Camisas</a></li>
+          <li><a href="#" class="hover:underline">Pantalones</a></li>
+          <li><a href="#" class="hover:underline">Accesorios</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Información legal">
+        <h2 class="font-semibold mb-3">Información</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+          <li><a href="#" class="hover:underline">Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Sobre la marca</a></li>
+        </ul>
+      </nav>
+      <address class="not-italic text-sm space-y-2">
+        <h2 class="font-semibold mb-3 text-base">Contacto</h2>
+        <p itemprop="name">Maison Lumière</p>
+        <p itemprop="address">12 Rue du Faubourg, 75008 París</p>
+        <p><a itemprop="email" href="mailto:hola@maisonlumiere.fr" class="hover:underline">hola@maisonlumiere.fr</a></p>
+        <p><a itemprop="telephone" href="tel:+33100000000" class="hover:underline">+33 1 00 00 00 00</a></p>
+      </address>
+    </div>
+    <p class="border-t border-white/20 text-center text-xs py-4 text-white/80">© 2026 Maison Lumière. Prototipo demostrativo.</p>
+  </footer>
+</body>
+</html>

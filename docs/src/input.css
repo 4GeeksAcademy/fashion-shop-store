@@ -2,6 +2,7 @@
 @source "../../index.html";
 @source "../../catalogo.html";
 @source "../../producto.html";
+@source "../../checkout.html";
 
 @theme {
   --color-bg: #FAFAF8;
@@ -24,5 +25,16 @@
   :focus-visible {
     outline: 3px solid var(--color-focus);
     outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .checkout-step {
+    display: none;
+  }
+
+  .checkout-flow:not(:has(.checkout-step:target)) #datos-personales,
+  .checkout-flow .checkout-step:target {
+    display: block;
   }
 }
