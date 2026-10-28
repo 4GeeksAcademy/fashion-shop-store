@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sacoche Voyage | Maison Lumière</title>
+  <meta name="description" content="Descubre Sacoche Voyage de Maison Lumière, un bolso bandolera de lona y piel para acompañarte en la ciudad y tus viajes.">
+  <link rel="stylesheet" href="docs/css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface px-4 py-2">Saltar al contenido</a>
+
+  <header itemscope itemtype="https://schema.org/WPHeader" class="sticky top-0 z-50 bg-surface border-b border-line">
+    <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
+      <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
+      <a href="catalogo.html" class="text-sm font-semibold hover:underline">Catálogo</a>
+
+      <form action="#" role="search" class="order-last w-full md:order-none md:w-80">
+        <label for="buscar" class="sr-only">Buscar productos</label>
+        <div class="flex items-center border border-line rounded-full px-4 h-11 bg-surface">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="buscar" name="q" type="search" placeholder="Buscar" class="ml-2 w-full bg-transparent outline-none">
+        </div>
+      </form>
+
+      <a href="#" aria-label="Mi cuenta" class="inline-flex size-11 items-center justify-center">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 py-10">
+    <nav aria-label="Ruta de navegación" class="text-sm text-muted mb-8">
+      <a href="index.html" class="hover:underline">Inicio</a>
+      <span aria-hidden="true" class="mx-2">/</span>
+      <a href="catalogo.html" class="hover:underline">Catálogo</a>
+      <span aria-hidden="true" class="mx-2">/</span>
+      <span aria-current="page">Sacoche Voyage</span>
+    </nav>
+
+    <article itemscope itemtype="https://schema.org/Product" class="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">
+      <div>
+        <img itemprop="image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=90" alt="Bolso bandolera Sacoche Voyage de lona y piel" width="1200" height="1500" fetchpriority="high" class="aspect-[4/5] w-full object-cover bg-[#f1efec]">
+      </div>
+
+      <div class="flex flex-col justify-center py-2 md:py-8">
+        <p itemprop="category" class="text-sm uppercase tracking-wide text-muted mb-3">Accesorios · Maison Lumière</p>
+        <h1 itemprop="name" class="font-display text-4xl md:text-5xl">Sacoche Voyage</h1>
+        <p class="mt-3 text-sm text-muted">Referencia <span itemprop="sku">ML-ACC-019</span></p>
+
+        <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-6 border-y border-line py-5">
+          <meta itemprop="priceCurrency" content="EUR">
+          <p class="text-xl font-semibold"><span itemprop="price" content="165">165 €</span></p>
+          <p class="mt-1 text-sm text-muted">Impuestos incluidos</p>
+        </div>
+
+        <div class="grid gap-5 py-6 sm:grid-cols-2">
+          <div>
+            <p class="text-sm font-semibold">Talla</p>
+            <p class="mt-2 text-sm">Talla única</p>
+          </div>
+          <div>
+            <label for="cantidad" class="block text-sm font-semibold">Cantidad</label>
+            <input id="cantidad" name="cantidad" type="number" value="1" min="1" aria-describedby="aviso-controles" class="mt-2 h-11 w-24 border border-line bg-surface px-3 text-sm">
+          </div>
+        </div>
+
+        <button type="button" disabled aria-describedby="aviso-controles" class="min-h-12 w-full bg-primary px-6 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60">Añadir al carrito</button>
+        <p id="aviso-controles" class="mt-3 text-sm text-muted">Puedes cambiar la cantidad, pero la selección no se guarda ni se procesa una compra.</p>
+
+        <section itemprop="description" aria-labelledby="titulo-descripcion" class="mt-8 border-t border-line pt-6">
+          <h2 id="titulo-descripcion" class="font-display text-2xl">Detalles</h2>
+          <p class="mt-3 text-sm leading-6 text-muted">Sacoche Voyage es un bolso bandolera ligero que combina un cuerpo de lona resistente con detalles de piel y un forro textil. Su formato compacto está pensado para llevar organizados tus esenciales, como el teléfono, la cartera y las llaves, sin recurrir a un bolso voluminoso. Llévalo cruzado para tener las manos libres en tus desplazamientos diarios, durante un paseo por la ciudad o en una escapada corta de fin de semana.</p>
+          <dl class="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+            <div>
+              <dt class="font-semibold">Materiales</dt>
+              <dd class="mt-1 text-muted">Lona resistente, detalles de piel y forro textil.</dd>
+            </div>
+            <div>
+              <dt class="font-semibold">Uso recomendado</dt>
+              <dd class="mt-1 text-muted">Uso diario y viajes cortos.</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="bg-ink text-white">
+    <div itemscope itemtype="https://schema.org/Organization" class="mx-auto max-w-[1440px] px-4 md:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <nav aria-label="Categorías">
+        <h2 class="font-semibold mb-3">Categorías</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Calzado</a></li>
+          <li><a href="#" class="hover:underline">Camisas</a></li>
+          <li><a href="#" class="hover:underline">Pantalones</a></li>
+          <li><a href="#" class="hover:underline">Accesorios</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Información legal">
+        <h2 class="font-semibold mb-3">Información</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+          <li><a href="#" class="hover:underline">Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Sobre la marca</a></li>
+        </ul>
+      </nav>
+      <address class="not-italic text-sm space-y-2">
+        <h2 class="font-semibold mb-3 text-base">Contacto</h2>
+        <p itemprop="name">Maison Lumière</p>
+        <p itemprop="address">12 Rue du Faubourg, 75008 París</p>
+        <p><a itemprop="email" href="mailto:hola@maisonlumiere.fr" class="hover:underline">hola@maisonlumiere.fr</a></p>
+        <p><a itemprop="telephone" href="tel:+33100000000" class="hover:underline">+33 1 00 00 00 00</a></p>
+      </address>
+    </div>
+    <p class="border-t border-white/20 text-center text-xs py-4 text-white/80">© 2026 Maison Lumière. Prototipo demostrativo.</p>
+  </footer>
+</body>
+</html>
