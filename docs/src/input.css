@@ -3,6 +3,7 @@
 @source "../../catalogo.html";
 @source "../../producto.html";
 @source "../../checkout.html";
+@source "../../carrito.html";
 
 @theme {
   --color-bg: #FAFAF8;
@@ -29,6 +30,130 @@
 }
 
 @layer components {
+  .home-carousel-slide {
+    position: relative;
+  }
+
+  .home-carousel-slide > article > a {
+    @apply relative block w-full overflow-hidden rounded-md;
+  }
+
+  .home-carousel-slide > article > a > img {
+    width: 100%;
+    max-height: 620px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  .home-carousel-slide > article > a > div {
+    @apply absolute bottom-4 left-4 z-10 max-w-md rounded-md bg-ink/85 p-5 text-white backdrop-blur-sm sm:bottom-8 sm:left-8 sm:p-8;
+  }
+
+  .home-carousel-slide > article > a > div > p:first-child {
+    @apply text-white/75;
+  }
+
+  @media (min-width: 640px) {
+    .home-carousel-slide > article > a > img {
+      aspect-ratio: 16 / 8;
+    }
+  }
+
+  .home-carousel-slide > nav[aria-label^="Controles"] {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    display: block;
+    margin: 0;
+    border: 0;
+    padding: 0;
+  }
+
+  .home-carousel-slide > nav[aria-label^="Controles"] > a:first-child,
+  .home-carousel-slide > nav[aria-label^="Controles"] > a:last-child {
+    @apply pointer-events-auto absolute top-1/2 z-20 border-white/70 bg-surface/90 text-ink shadow-sm backdrop-blur-sm hover:bg-white;
+    transform: translateY(-50%);
+  }
+
+  .home-carousel-slide > nav[aria-label^="Controles"] > a:first-child {
+    @apply left-3 sm:left-6;
+  }
+
+  .home-carousel-slide > nav[aria-label^="Controles"] > a:last-child {
+    @apply right-3 sm:right-6;
+  }
+
+  .home-carousel-slide > nav[aria-label^="Controles"] > div[role="group"] {
+    @apply pointer-events-auto absolute -bottom-10 left-1/2 z-20 -translate-x-1/2 items-center gap-0.5;
+  }
+
+  .home-carousel-slide h3 {
+    @apply font-display text-4xl;
+  }
+
+  .home-carousel-slide article > a > div > p:last-child {
+    @apply mt-4 text-xl font-semibold;
+  }
+
+  .home-carousel-dot {
+    @apply grid size-8 place-items-center rounded-full focus-visible:outline-2 focus-visible:outline-focus;
+  }
+
+  .home-carousel-dot > span {
+    @apply block h-0.5 w-6 rounded-full bg-line transition-all;
+  }
+
+  .home-carousel-dot:hover > span {
+    @apply bg-accent;
+  }
+
+  #novedad-1:target .home-carousel-dot[href="#novedad-1"] > span,
+  #novedad-2:target .home-carousel-dot[href="#novedad-2"] > span,
+  #novedad-3:target .home-carousel-dot[href="#novedad-3"] > span,
+  #novedad-4:target .home-carousel-dot[href="#novedad-4"] > span,
+  #vendido-1:target .home-carousel-dot[href="#vendido-1"] > span,
+  #vendido-2:target .home-carousel-dot[href="#vendido-2"] > span,
+  #vendido-3:target .home-carousel-dot[href="#vendido-3"] > span,
+  #vendido-4:target .home-carousel-dot[href="#vendido-4"] > span {
+    @apply w-10 bg-primary;
+  }
+
+  .home-carousel:not(:has(.home-carousel-slide:target)) #novedad-1 .home-carousel-dot[href="#novedad-1"] > span,
+  .home-carousel:not(:has(.home-carousel-slide:target)) #vendido-1 .home-carousel-dot[href="#vendido-1"] > span {
+    @apply w-10 bg-primary;
+  }
+
+  .home-carousel-slide {
+    display: none;
+  }
+
+  .home-carousel:not(:has(.home-carousel-slide:target)) .home-carousel-slide:first-child,
+  .home-carousel .home-carousel-slide:target {
+    display: block;
+  }
+
+  .checkout-stepper .checkout-step-number {
+    @apply grid size-10 shrink-0 place-items-center rounded-full border-2 border-line bg-surface text-sm font-semibold text-muted transition-colors;
+  }
+
+  .checkout-stepper a:hover .checkout-step-number {
+    @apply border-accent bg-accent text-white;
+  }
+
+  .checkout-page:not(:has(.checkout-step:target)) .checkout-stepper a[href="#datos-personales"] .checkout-step-number,
+  .checkout-page:has(#datos-personales:target) .checkout-stepper a[href="#datos-personales"] .checkout-step-number,
+  .checkout-page:has(#direccion-entrega:target) .checkout-stepper a[href="#direccion-entrega"] .checkout-step-number,
+  .checkout-page:has(#pago-tarjeta:target) .checkout-stepper a[href="#pago-tarjeta"] .checkout-step-number {
+    @apply border-primary bg-primary text-white;
+  }
+
+  .checkout-page:not(:has(.checkout-step:target)) .checkout-stepper a[href="#datos-personales"] > span:last-child,
+  .checkout-page:has(#datos-personales:target) .checkout-stepper a[href="#datos-personales"] > span:last-child,
+  .checkout-page:has(#direccion-entrega:target) .checkout-stepper a[href="#direccion-entrega"] > span:last-child,
+  .checkout-page:has(#pago-tarjeta:target) .checkout-stepper a[href="#pago-tarjeta"] > span:last-child {
+    @apply text-primary;
+  }
+
   img[itemprop="image"] {
     @apply rounded-md;
   }

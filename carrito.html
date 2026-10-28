@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrito | Maison Lumière</title>
+  <meta name="description" content="Revisa los productos de ejemplo de tu carrito Maison Lumière y continúa al checkout demostrativo.">
+  <link rel="stylesheet" href="docs/css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface px-4 py-2">Saltar al contenido</a>
+
+  <header itemscope itemtype="https://schema.org/WPHeader" class="sticky top-0 z-50 bg-surface border-b border-line">
+    <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
+      <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
+      <a href="catalogo.html" class="text-sm font-semibold hover:underline">Catálogo</a>
+      <a href="carrito.html" aria-label="Carrito de compra" aria-current="page" class="inline-flex size-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-focus">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      </a>
+
+      <form action="#" role="search" class="order-last w-full md:order-none md:w-80">
+        <label for="buscar" class="sr-only">Buscar productos</label>
+        <div class="flex items-center border border-line rounded-full px-4 h-11 bg-surface">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="buscar" name="q" type="search" placeholder="Buscar" class="ml-2 w-full bg-transparent outline-none">
+        </div>
+      </form>
+
+      <a href="#" aria-label="Mi cuenta" class="inline-flex size-11 items-center justify-center">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 py-10">
+    <nav aria-label="Ruta de navegación" class="text-sm text-muted mb-8">
+      <a href="index.html" class="hover:underline">Inicio</a>
+      <span aria-hidden="true" class="mx-2">/</span>
+      <span aria-current="page">Carrito</span>
+    </nav>
+
+    <div class="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-5">
+      <div>
+        <p class="text-sm uppercase tracking-wide text-muted mb-1">Maison Lumière · París</p>
+        <h1 class="font-display text-4xl">Tu carrito</h1>
+      </div>
+      <a href="catalogo.html" class="text-sm font-semibold underline underline-offset-4 hover:text-primary">Seguir comprando</a>
+    </div>
+
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-16">
+      <section aria-labelledby="titulo-productos">
+        <h2 id="titulo-productos" class="sr-only">Productos del carrito</h2>
+        <ol itemscope itemtype="https://schema.org/ItemList" class="divide-y divide-line">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="py-6 first:pt-0">
+            <meta itemprop="position" content="1">
+            <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="grid grid-cols-[88px_minmax(0,1fr)] gap-x-4 gap-y-3 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:gap-x-6">
+              <a href="producto.html" class="row-span-2 block focus-visible:outline-2 focus-visible:outline-focus sm:row-span-1">
+                <img itemprop="image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=400&q=85" alt="Bolso bandolera Sacoche Voyage de lona y piel" width="400" height="500" class="aspect-[4/5] w-full object-cover bg-[#f1efec]">
+              </a>
+              <div>
+                <p itemprop="category" class="text-xs text-muted mb-1">Accesorios</p>
+                <h3 itemprop="name" class="font-medium"><a href="producto.html" class="hover:underline">Sacoche Voyage</a></h3>
+                <p class="mt-2 text-sm text-muted">Precio unitario: <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="165">165 €</span></span></p>
+                <p class="mt-1 text-sm text-muted">Cantidad: 1</p>
+              </div>
+              <p class="col-span-2 text-sm font-semibold sm:col-span-1 sm:self-end sm:text-right">Total del producto: <span>165 €</span></p>
+            </article>
+          </li>
+
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="py-6">
+            <meta itemprop="position" content="2">
+            <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="grid grid-cols-[88px_minmax(0,1fr)] gap-x-4 gap-y-3 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:gap-x-6">
+              <a href="producto.html" class="row-span-2 block focus-visible:outline-2 focus-visible:outline-focus sm:row-span-1">
+                <img itemprop="image" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=400&q=85" alt="Zapatillas urbanas blancas Sneaker Atelier" width="400" height="500" class="aspect-[4/5] w-full object-cover bg-[#f1efec]">
+              </a>
+              <div>
+                <p itemprop="category" class="text-xs text-muted mb-1">Calzado</p>
+                <h3 itemprop="name" class="font-medium"><a href="producto.html" class="hover:underline">Sneaker Atelier</a></h3>
+                <p class="mt-2 text-sm text-muted">Precio unitario: <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="155">155 €</span></span></p>
+                <p class="mt-1 text-sm text-muted">Cantidad: 1</p>
+              </div>
+              <p class="col-span-2 text-sm font-semibold sm:col-span-1 sm:self-end sm:text-right">Total del producto: <span>155 €</span></p>
+            </article>
+          </li>
+
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="py-6 last:pb-0">
+            <meta itemprop="position" content="3">
+            <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="grid grid-cols-[88px_minmax(0,1fr)] gap-x-4 gap-y-3 sm:grid-cols-[120px_minmax(0,1fr)_auto] sm:gap-x-6">
+              <a href="producto.html" class="row-span-2 block focus-visible:outline-2 focus-visible:outline-focus sm:row-span-1">
+                <img itemprop="image" src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=400&q=85" alt="Camisa blanca de corte clásico Camisa Blanche" width="400" height="500" class="aspect-[4/5] w-full object-cover bg-[#f1efec]">
+              </a>
+              <div>
+                <p itemprop="category" class="text-xs text-muted mb-1">Camisas</p>
+                <h3 itemprop="name" class="font-medium"><a href="producto.html" class="hover:underline">Camisa Blanche</a></h3>
+                <p class="mt-2 text-sm text-muted">Precio unitario: <span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="95">95 €</span></span></p>
+                <p class="mt-1 text-sm text-muted">Cantidad: 1</p>
+              </div>
+              <p class="col-span-2 text-sm font-semibold sm:col-span-1 sm:self-end sm:text-right">Total del producto: <span>95 €</span></p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <aside aria-labelledby="titulo-resumen" class="h-fit rounded-md border border-line bg-surface p-6 sm:p-8">
+        <h2 id="titulo-resumen" class="font-display text-2xl">Resumen del pedido</h2>
+        <dl class="mt-6 space-y-4 text-sm">
+          <div class="flex justify-between gap-4">
+            <dt class="text-muted">Subtotal</dt>
+            <dd class="font-medium">415 €</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-muted">Impuestos (20%)</dt>
+            <dd class="font-medium">83 €</dd>
+          </div>
+          <div class="flex justify-between gap-4 border-t border-line pt-4 text-base">
+            <dt class="font-semibold">Total</dt>
+            <dd class="font-semibold">498 €</dd>
+          </div>
+        </dl>
+        <p class="mt-5 text-xs leading-5 text-muted">Importes de ejemplo. El carrito no calcula ni guarda cambios.</p>
+        <a href="checkout.html" class="mt-6 inline-flex min-h-12 w-full items-center justify-center bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-ink focus-visible:outline-2 focus-visible:outline-focus">Continuar al pago</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer itemscope itemtype="https://schema.org/WPFooter" class="bg-ink text-white">
+    <div itemscope itemtype="https://schema.org/Organization" class="mx-auto max-w-[1440px] px-4 md:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <nav aria-label="Categorías">
+        <h2 class="font-semibold mb-3">Categorías</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Calzado</a></li>
+          <li><a href="#" class="hover:underline">Camisas</a></li>
+          <li><a href="#" class="hover:underline">Pantalones</a></li>
+          <li><a href="#" class="hover:underline">Accesorios</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Información legal">
+        <h2 class="font-semibold mb-3">Información</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:underline">Términos y condiciones</a></li>
+          <li><a href="#" class="hover:underline">Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Sobre la marca</a></li>
+        </ul>
+      </nav>
+      <address class="not-italic text-sm space-y-2">
+        <h2 class="font-semibold mb-3 text-base">Contacto</h2>
+        <p itemprop="name">Maison Lumière</p>
+        <p itemprop="address">12 Rue du Faubourg, 75008 París</p>
+        <p><a itemprop="email" href="mailto:hola@maisonlumiere.fr" class="hover:underline">hola@maisonlumiere.fr</a></p>
+        <p><a itemprop="telephone" href="tel:+33100000000" class="hover:underline">+33 1 00 00 00 00</a></p>
+      </address>
+    </div>
+    <p class="border-t border-white/20 text-center text-xs py-4 text-white/80">© 2026 Maison Lumière. Prototipo demostrativo.</p>
+  </footer>
+</body>
+</html>
