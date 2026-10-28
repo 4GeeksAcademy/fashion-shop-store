@@ -14,6 +14,9 @@
     <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
       <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
       <a href="catalogo.html" class="text-sm font-semibold hover:underline">Catálogo</a>
+      <a href="carrito.html" aria-label="Carrito de compra" class="inline-flex size-11 items-center justify-center focus-visible:outline-2 focus-visible:outline-focus">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 14H5L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      </a>
 
       <form action="#" role="search" class="order-last w-full md:order-none md:w-80">
         <label for="buscar" class="sr-only">Buscar productos</label>
@@ -53,8 +56,8 @@
         <a href="catalogo.html" class="text-sm font-semibold underline underline-offset-4 hover:text-primary">Ver todo el catálogo</a>
       </div>
 
-      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Nuevos lanzamientos" class="grid auto-cols-[minmax(220px,1fr)] grid-flow-col gap-5 overflow-x-auto pb-5 snap-x snap-mandatory md:auto-cols-[minmax(240px,1fr)]">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Nuevos lanzamientos" class="home-carousel w-full pb-12">
+        <li id="novedad-1" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="1">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -66,8 +69,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de nuevos lanzamientos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#novedad-4" aria-label="Producto anterior en nuevos lanzamientos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar lanzamiento" class="flex items-center gap-0.5">
+              <a href="#novedad-1" aria-label="Mostrar lanzamiento 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-2" aria-label="Mostrar lanzamiento 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-3" aria-label="Mostrar lanzamiento 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-4" aria-label="Mostrar lanzamiento 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#novedad-2" aria-label="Siguiente producto en nuevos lanzamientos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="novedad-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="2">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -79,8 +96,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de nuevos lanzamientos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#novedad-1" aria-label="Producto anterior en nuevos lanzamientos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar lanzamiento" class="flex items-center gap-0.5">
+              <a href="#novedad-1" aria-label="Mostrar lanzamiento 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-2" aria-label="Mostrar lanzamiento 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-3" aria-label="Mostrar lanzamiento 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-4" aria-label="Mostrar lanzamiento 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#novedad-3" aria-label="Siguiente producto en nuevos lanzamientos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="novedad-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="3">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -92,8 +123,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de nuevos lanzamientos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#novedad-2" aria-label="Producto anterior en nuevos lanzamientos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar lanzamiento" class="flex items-center gap-0.5">
+              <a href="#novedad-1" aria-label="Mostrar lanzamiento 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-2" aria-label="Mostrar lanzamiento 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-3" aria-label="Mostrar lanzamiento 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-4" aria-label="Mostrar lanzamiento 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#novedad-4" aria-label="Siguiente producto en nuevos lanzamientos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="novedad-4" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="4">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -105,6 +150,20 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de nuevos lanzamientos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#novedad-3" aria-label="Producto anterior en nuevos lanzamientos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar lanzamiento" class="flex items-center gap-0.5">
+              <a href="#novedad-1" aria-label="Mostrar lanzamiento 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-2" aria-label="Mostrar lanzamiento 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-3" aria-label="Mostrar lanzamiento 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#novedad-4" aria-label="Mostrar lanzamiento 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#novedad-1" aria-label="Siguiente producto en nuevos lanzamientos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
       </ol>
     </section>
@@ -118,8 +177,8 @@
         <a href="catalogo.html" class="text-sm font-semibold underline underline-offset-4 hover:text-primary">Ver todo el catálogo</a>
       </div>
 
-      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Productos más vendidos" class="grid auto-cols-[minmax(220px,1fr)] grid-flow-col gap-5 overflow-x-auto pb-5 snap-x snap-mandatory md:auto-cols-[minmax(240px,1fr)]">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Productos más vendidos" class="home-carousel w-full pb-12">
+        <li id="vendido-1" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="1">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -131,8 +190,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de más vendidos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#vendido-4" aria-label="Producto anterior en más vendidos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar producto más vendido" class="flex items-center gap-0.5">
+              <a href="#vendido-1" aria-label="Mostrar más vendido 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-2" aria-label="Mostrar más vendido 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-3" aria-label="Mostrar más vendido 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-4" aria-label="Mostrar más vendido 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#vendido-2" aria-label="Siguiente producto en más vendidos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="vendido-2" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="2">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -144,8 +217,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de más vendidos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#vendido-1" aria-label="Producto anterior en más vendidos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar producto más vendido" class="flex items-center gap-0.5">
+              <a href="#vendido-1" aria-label="Mostrar más vendido 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-2" aria-label="Mostrar más vendido 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-3" aria-label="Mostrar más vendido 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-4" aria-label="Mostrar más vendido 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#vendido-3" aria-label="Siguiente producto en más vendidos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="vendido-3" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="3">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -157,8 +244,22 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de más vendidos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#vendido-2" aria-label="Producto anterior en más vendidos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar producto más vendido" class="flex items-center gap-0.5">
+              <a href="#vendido-1" aria-label="Mostrar más vendido 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-2" aria-label="Mostrar más vendido 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-3" aria-label="Mostrar más vendido 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-4" aria-label="Mostrar más vendido 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#vendido-4" aria-label="Siguiente producto en más vendidos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+        <li id="vendido-4" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="home-carousel-slide scroll-mt-32">
           <meta itemprop="position" content="4">
           <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
             <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
@@ -170,6 +271,20 @@
               </div>
             </a>
           </article>
+          <nav aria-label="Controles de más vendidos" class="mt-5 flex items-center justify-between border-t border-line pt-4">
+            <a href="#vendido-3" aria-label="Producto anterior en más vendidos" title="Anterior" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+            </a>
+            <div role="group" aria-label="Seleccionar producto más vendido" class="flex items-center gap-0.5">
+              <a href="#vendido-1" aria-label="Mostrar más vendido 1 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-2" aria-label="Mostrar más vendido 2 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-3" aria-label="Mostrar más vendido 3 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+              <a href="#vendido-4" aria-label="Mostrar más vendido 4 de 4" class="home-carousel-dot"><span aria-hidden="true"></span></a>
+            </div>
+            <a href="#vendido-1" aria-label="Siguiente producto en más vendidos" title="Siguiente" class="inline-flex size-11 items-center justify-center rounded-full border border-line text-ink hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-focus">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </nav>
         </li>
       </ol>
     </section>
