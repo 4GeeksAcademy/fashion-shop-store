@@ -10,7 +10,7 @@
 <body class="min-h-screen flex flex-col">
   <a href="#contenido" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-surface px-4 py-2">Saltar al contenido</a>
 
-  <header itemscope itemtype="https://schema.org/WPHeader" class="bg-surface border-b border-line">
+  <header itemscope itemtype="https://schema.org/WPHeader" class="sticky top-0 z-50 bg-surface border-b border-line">
     <nav aria-label="Principal" class="mx-auto max-w-[1440px] px-4 md:px-8 py-4 flex flex-wrap items-center gap-4">
       <a href="index.html" class="font-display text-3xl font-semibold mr-auto">Maison Lumière</a>
       <a href="catalogo.html" class="text-sm font-semibold hover:underline">Catálogo</a>
@@ -29,7 +29,151 @@
     </nav>
   </header>
 
-  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 py-10"></main>
+  <main id="contenido" class="flex-1 mx-auto w-full max-w-[1440px] px-4 md:px-8 pb-16">
+    <section aria-labelledby="titulo-campana" class="relative isolate mt-6 flex min-h-[440px] items-end overflow-hidden rounded-md bg-ink px-6 py-10 sm:min-h-[500px] md:min-h-[560px] md:items-center md:px-12 lg:px-16">
+      <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=2000&q=90" alt="Bolso bandolera de lona y piel para viajar ligero" width="2000" height="1200" fetchpriority="high" class="absolute inset-0 -z-10 h-full w-full object-cover">
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-ink/40"></div>
+      <div class="relative z-10 max-w-xl text-white">
+        <p class="text-sm font-semibold uppercase tracking-wide">La campaña de temporada</p>
+        <h1 id="titulo-campana" class="mt-3 font-display text-5xl leading-tight">La ciudad, siempre contigo</h1>
+        <p class="mt-4 max-w-lg text-base leading-7 text-white/90">Piezas pensadas para acompañar el ritmo de cada día, desde las calles de París hasta tu próximo viaje.</p>
+        <a href="catalogo.html" class="group mt-7 inline-flex min-h-12 items-center gap-3 border-b border-white/70 pb-2 text-sm font-semibold text-white transition-colors hover:border-primary focus-visible:outline-2 focus-visible:outline-white">
+          <span>Explorar la colección</span>
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-novedades" class="mt-16 md:mt-20">
+      <div class="mb-6 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-4">
+        <div>
+          <p class="text-sm uppercase tracking-wide text-muted">Acaban de llegar</p>
+          <h2 id="titulo-novedades" class="mt-1 font-display text-3xl">Nuevos lanzamientos</h2>
+        </div>
+        <a href="catalogo.html" class="text-sm font-semibold underline underline-offset-4 hover:text-primary">Ver todo el catálogo</a>
+      </div>
+
+      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Nuevos lanzamientos" class="grid auto-cols-[minmax(220px,1fr)] grid-flow-col gap-5 overflow-x-auto pb-5 snap-x snap-mandatory md:auto-cols-[minmax(240px,1fr)]">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="1">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=85" alt="Bolso bandolera de lona y piel Sacoche Voyage" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Accesorios</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Sacoche Voyage</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="165">165 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="2">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=800&q=85" alt="Zapatillas urbanas blancas Sneaker Atelier" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Calzado</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Sneaker Atelier</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="155">155 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="3">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=800&q=85" alt="Camisa de lino en tono arena" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Camisas</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Camisa Lino Provence</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="105">105 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="4">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=85" alt="Foulard ligero con estampado floral" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Accesorios</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Foulard Jardin d'Été</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="75">75 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="titulo-mas-vendidos" class="mt-16 md:mt-20">
+      <div class="mb-6 flex flex-wrap items-end justify-between gap-4 border-b border-line pb-4">
+        <div>
+          <p class="text-sm uppercase tracking-wide text-muted">Favoritos de la maison</p>
+          <h2 id="titulo-mas-vendidos" class="mt-1 font-display text-3xl">Más vendidos</h2>
+        </div>
+        <a href="catalogo.html" class="text-sm font-semibold underline underline-offset-4 hover:text-primary">Ver todo el catálogo</a>
+      </div>
+
+      <ol itemscope itemtype="https://schema.org/ItemList" aria-label="Productos más vendidos" class="grid auto-cols-[minmax(220px,1fr)] grid-flow-col gap-5 overflow-x-auto pb-5 snap-x snap-mandatory md:auto-cols-[minmax(240px,1fr)]">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="1">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=85" alt="Zapatilla deportiva roja Sneaker Rue Rouge" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Calzado</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Sneaker Rue Rouge</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="145">145 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="2">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=800&q=85" alt="Camisa blanca de corte clásico" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Camisas</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Camisa Blanche</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="95">95 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="3">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=85" alt="Pantalón recto de color oscuro" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Pantalones</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Pantalón Droit</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="130">130 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="snap-start">
+          <meta itemprop="position" content="4">
+          <article itemprop="item" itemscope itemtype="https://schema.org/Product" class="group">
+            <a href="producto.html" class="block focus-visible:outline-2 focus-visible:outline-focus">
+              <img itemprop="image" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=85" alt="Bolso pequeño de piel en color tostado" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full bg-[#f1efec] object-cover">
+              <div class="pt-3">
+                <p itemprop="category" class="mb-1 text-xs text-muted">Accesorios</p>
+                <h3 itemprop="name" class="font-medium group-hover:underline">Sac Le Marais</h3>
+                <p class="mt-1 text-sm"><span itemprop="offers" itemscope itemtype="https://schema.org/Offer"><meta itemprop="priceCurrency" content="EUR"><span itemprop="price" content="210">210 €</span></span></p>
+              </div>
+            </a>
+          </article>
+        </li>
+      </ol>
+    </section>
+  </main>
 
   <footer itemscope itemtype="https://schema.org/WPFooter" class="bg-ink text-white">
     <div itemscope itemtype="https://schema.org/Organization" class="mx-auto max-w-[1440px] px-4 md:px-8 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">

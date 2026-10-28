@@ -29,6 +29,10 @@
 }
 
 @layer components {
+  img[itemprop="image"] {
+    @apply rounded-md;
+  }
+
   .checkout-step {
     display: none;
   }
