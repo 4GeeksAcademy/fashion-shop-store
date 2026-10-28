@@ -1,0 +1,11 @@
+{
+  "name": "fashion-shop-store",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i docs/src/input.css -o docs/css/styles.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
